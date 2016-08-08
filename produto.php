@@ -67,17 +67,17 @@
               <!-- imagens e radio  -->
               <input type="radio" name="cor" value="verde" id="verde" checked>
               <label for="verde">
-                <img src="img/produtos/foto2-verde.png" alt="verde">
+                <img src="img/produtos/foto<?php echo $_GET["id"]; ?>-<?= "verde"?>.png " alt="verde">
               </label>
               
               <input type="radio" name="cor" value="rosa" id="rosa">
               <label for="rosa">
-                <img src="img/produtos/foto2-rosa.png" alt="rosa">
+                <img src="img/produtos/foto<?= $_GET["id"] ?>-<?= "rosa" ?>.png" alt="rosa">
               </label>
               
               <input type="radio" name="cor" value="azul" id="azul">
               <label for="azul">
-                <img src="img/produtos/foto2-azul.png" alt="azul">
+                <img src="img/produtos/foto<?= $_GET["id"] ?>-<?= "azul" ?>.png">
               </label>
               <!--fim!-->
               
@@ -85,7 +85,7 @@
               <input type="hidden" name="nome" value="Fuzzy Cardigan">
               <input type="hidden" name="preco" value="129.00">
               <!-- imprimindo valor para enviar ao servidor -->
-              <input type="hidden" value="<?php echo 2 ?>" name="img">
+              <input type="hidden" value="<?php echo $_GET["id"] ?>" name="id">
               <!--fim inputs hidden para passar informações extra -->
           </fieldset>
 

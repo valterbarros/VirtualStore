@@ -50,7 +50,7 @@
 			  	</div>	
 					<div class="panel-body">	
 					  <!-- essa imagem ficar responsiva e oculta em tamanhos extra pequenos -->
-					  <img src="img/produtos/foto<?= $_POST["img"] ?>-<?= $_POST["cor"] ?>.png" class="img-thumbnail img-responsive hidden-xs">
+					  <img src="img/produtos/foto<?= $_POST["id"] ?>-<?= $_POST["cor"] ?>.png" class="img-thumbnail img-responsive hidden-xs">
 					  <dl>
 					    <dt>Produto</dt>
 					    <dd><?php echo $_POST['nome']?></dd>
