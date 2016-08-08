@@ -1,0 +1,242 @@
+input,p, form, ul, li, figure, figcaption,h2{
+	margin:0;
+	list-style:none;
+	padding:0;
+}
+
+ul{
+  padding: 0 45px;
+}
+/*cabecalho*/
+/*pai do h1, nav e da sacola de compras*/
+header {
+  position: relative;
+  margin:0;
+  padding:0;
+}
+
+header h1{
+  margin:0;
+  padding:0;
+}
+
+.logotipo {
+  z-index:-1;
+  position: relative;
+  top: 20px;
+  left: 0px;
+}
+
+/*Menu Nav cabeçalho pai da Lista ul*/
+.menu-opcoes{ 
+    /* código de um menu de opcoes*/
+    /* essas regras serão aplicadas ao nav*/
+    position: absolute;
+    right: 0;
+ 	  top:60px;
+}
+
+/*Itens ("li") da lista "ul" dentro do "nav" com class = "menu-opções"*/
+.menu-opcoes ul li{ 
+    font-size: 15px;
+    display:inline; /*Por padrão os itens vem na vertical porem com a propriedade display:inline mudamos seu posicionamento*/
+    left: 0px;
+    margin-left: 20px;
+    position:relative;
+    padding:0;
+}
+
+.menu-opcoes a{ 
+    color: #003366;
+}
+
+/*Menu Nav cabeçalho pai da Lista ul*/
+.menu-cabecalho {
+    /* código de um menu no cabeçalho*/
+    /*essas regras TAMBÉM serão aplicadas ao nav*/ 
+}
+
+/*Sacola tag <p>*/
+p.sacola{
+	z-index:-1;
+	display:inline;
+	background: url(../img/sacola.png) no-repeat top right; /*no-repeat: para não repetir a imagem varias vezes, top: imagem no topo, right: imagem na direita*/
+	position: absolute;
+  top: 10px;
+  right:0px;
+  padding-right: 30px; /**/
+  text-align: right; /*Alinhar a Direita*/
+  width: 150px; /*Diminuir a area do texto*/
+  margin:0;
+  font-weight: normal;
+}
+
+body{
+	color: #333333;
+  	font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+}
+
+/*cabecalho Fim!*/
+
+#cima{
+	left: 30%;
+	top: 10%;
+	z-index: 1;
+	position: fixed;
+	width: 100px;
+	height: 50px;
+}
+
+#closebox{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -545px;
+    top: -7px;
+    background: url(../img/closebox.png) no-repeat top left;
+    border: none;
+}
+#fundoanuncio{
+	height: 100%;
+    width: 100%;
+	opacity: 0.6;
+	background-color: black;
+	position: fixed;
+}
+
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.todo{
+	color: #333333;
+	font-family:"Lucida Sans Unicode";
+	font-style:normal; /* fonte com estilo normal porem pode ser italic e oblique */
+	/*line-height: 12px; /* tamanho da altura de cada linha */
+  /*letter-spacing: 3px; /* tamanho do espaço entre cada letra */
+  /*word-spacing: 5px; /* tamanho do espaço entre cada palavra */
+}
+
+.todo p{
+	font-family: ;
+	text-align: left;
+	padding: 0 45px;
+  text-indent: 15px; /* tamanho da margem da primeira linha do texto
+	/*height: 300px;/*
+  /*width: 300px;*/
+}
+
+.hist{text-align: left;}
+
+section h1 {
+  padding: 10px;
+  background-image: url(../img/sobre-background.jpg);
+  color: black;
+}
+
+h2{margin-top: 30px; border-bottom: 2px solid #333333;}
+
+figure{
+	margin: auto;
+	background-color: #F2EDED;
+	border:1px solid #ccc;
+	text-align: center;
+	width: 600px;	
+	height: 405px;
+  padding-top:10px;
+}
+
+.familia-pelho{ /*Figura da Familia*/
+  margin: auto;
+	background-color: #F2EDED;
+	border:1px solid #ccc;
+	width: 350px;
+	height: 280px;
+	float: right;
+}
+
+
+figcaption{margin: auto; font-style: italic;}
+
+
+.link{
+	background-color: #87CEFA;
+	color: blue;
+	font-family: ;
+	text-align: left;
+  padding:10px 0 10px 0;
+  text-align:center;
+  margin-bottom:5px;
+}
+.link a{text-decoration: none;}
+
+/* Rodape da Pagina*/
+.social a[href*="facebook.com"]{
+  background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"] {
+  background-image: url(../img/twitter.png);
+}
+
+.social a[href*="plus.google.com"] {
+  background-image: url(../img/googleplus.png);
+}
+
+footer { background-image: url(../img/fundo-rodape.png); padding: 20px 0;}
+
+footer .container {
+  position: relative;
+}
+
+.social li a {
+  /* tamanho da imagem */
+  height: 32px;
+  width: 32px;
+
+  /* image replacement */
+  display: block;
+  text-indent: -9999px;  
+}
+
+.social {
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+
+.social li { float: left; margin-left: 25px; }
+
+/*CSS Avançado*/
+/*Resetando a Sacola*/
+p.sacola:first-letter{ 
+  font-weight: normal; /*Precisei colocar normal pois esse p é da sacola de compras*/
+  font-variant: normal;
+}
+p.sacola:first-line{
+  font-weight: normal; /*Precisei colocar normal pois esse p é da sacola de compras*/
+  font-variant: normal;
+  font-size:16px;
+}
+
+:not(p) + p:first-line { /*selecione as primeiras linhas dos parágrafos que não são precedidos por outros parágrafos.*/
+  font-variant: small-caps;
+  font-size:18px;
+}
+
+p:first-letter {     /*Modificar a primeira letra de todos os <p>'s*/
+  font-weight: bold;
+}
+
+.mirror + p { /*Selecionar o <p> que vem logo apos o elemento de classe ="mirror" (irmão adjacente)*/
+  text-indent: 0px; 
+}
+
+
