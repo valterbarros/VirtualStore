@@ -1,7 +1,7 @@
 *{
-	margin:0;
-	padding:0;
-	list-style:none;
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 /*pai do h1, nav e da sacola de compras*/
 header {
@@ -21,7 +21,7 @@ header {
     /* essas regras serão aplicadas ao nav*/
     position: absolute;
     right: 0;
- 	  top:60px;
+    top:60px;
 }
 /*Itens ("li") da lista "ul" dentro do "nav" com class = "menu-opções"*/
 .menu-opcoes ul li{ 
@@ -44,20 +44,20 @@ header {
 }
 /*Sacola tag <p>*/
 .sacola{
-	  display:inline;
-	  background: url(../img/sacola.png) no-repeat top right; /*no-repeat: para não repetir a imagem varias vezes, top: imagem no topo, right: imagem na direita*/
-	  position: absolute;
-  	top: 10px;
-  	right:0px;
-  	padding-bottom:5px;
-  	padding-right: 30px; /**/
-  	text-align: right; /*Alinhar a Direita*/
-  	width: 150px; /*Diminuir a area do texto*/
-  	margin:0;
+    display:inline;
+    background: url(../img/sacola.png) no-repeat top right; /*no-repeat: para não repetir a imagem varias vezes, top: imagem no topo, right: imagem na direita*/
+    position: absolute;
+    top: 10px;
+    right:0px;
+    padding-bottom:5px;
+    padding-right: 30px; /**/
+    text-align: right; /*Alinhar a Direita*/
+    width: 150px; /*Diminuir a area do texto*/
+    margin:0;
 }
 body{
     color: #333333;
-  	font-family: "Lucida Sans Unicode", sans-serif;
+    font-family: "Lucida Sans Unicode", sans-serif;
 }
 .container {
   margin: 0 auto;
@@ -74,14 +74,9 @@ body{
   float:left
 }
 
-.menu-departamentos{
-	padding-bottom: 10px;
-	clear: left;
-	margin-top:10px;
-}
 .busca,
 .destaque{
-	margin-top:10px;	
+  margin-top:10px;  
 }
 
 .busca h2,
@@ -90,16 +85,22 @@ body{
   margin: 10px;
 }
 
-.menu-departamentos li {
-  background-color: white;
-  margin-bottom: 1px;
-  padding: 5px 10px;
-}
-
-.menu-departamentos a {
-  color: #333333;
-  text-decoration: none;
-}
+/*estilização do menu departamentos com less*/
+.menu-departamentos{ 
+  padding-bottom: 10px;
+  clear: left;
+  margin-top:10px;
+  li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+  }
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+}  
+/*fim*/
 
 .busca input {
   vertical-align: middle;
@@ -112,96 +113,33 @@ body{
 }
 
 /*Painel de Destaque*/
-.painel{
-  box-shadow: 1px 1px 4px #999; /*Sombra no elemento*/
+.painel {
   margin: 10px 0;
   padding: 10px;
-  width: 445px;  
-  li{
-    display: inline-block;
-    vertical-align: top;
-    width: 140px;
-    margin: 2px;
-    padding-bottom: 10px;
-    -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;  
-    &:hover{
-      -webkit-transform: scale(1.2) rotate(-5deg);
-      transform: scale(1.2) rotate(-5deg);
-      -webkit-transition: 0.3s ease-in;
-          transition: 0.3s ease-in;
-    }
-  }
-  h2 {
-    font-family: 'Bad Script', cursive;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /*Sobra no texto*/
-    margin-bottom: 10px;
-    &:before{
-      content: '\2756'; /*Tabela Unicode*/
-      padding-right: 5px;
-      opacity: 0.4;
-    }
-  a{
-    color: #333;
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-  }  
-  button{
-    color: white;
-    position: relative;
-    margin-bottom: 10px;
-    display: none;
-    /* posicionamento */
-    float: right;
-    margin-right: 10px;
-    padding: 10px;
+  width: 445px;
+}
 
-    /* estilo */
-    background-color: #333;
-    border: 0;
-    border-radius: 4px;
-    box-shadow: 1px 1px 3px rgba(30,30,30,0.5);
-    color: white;
-    font-size: 1em;
-    text-decoration: none;
-    text-shadow: 1px 0 1px black;
+.painel li {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  margin: 2px;
+  padding-bottom: 10px;
+}
 
-    /* animação*/
-    transition: 0.3s;
-    &:hover{
-      background-color: #393939;
-      box-shadow: 1px 0 20px rgba(200,200,120,0.9);
-      &:after{
-        border-top-color: #393939;
-      }
-    }  
-    &:after{
-      /* elemento vazio */
-      content: '';
-      display: block;
-      height: 0;
-      width: 0;
+.painel h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
 
-      /* triangulo */
-      border-top: 10px solid #333;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
+  margin-bottom: 10px;
+}
 
-      /* posicionamento */
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-
-      /* animação */
-      transition: 0.3s;
-    }
-    }
-  }
+.painel a {
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .novidades {
@@ -280,6 +218,11 @@ footer .container { position: relative; }
   border-top: 15px solid transparent;
 }
 
+/*Efeito animatico quando passa o mouse pelo painel*/
+.painel li:hover {
+  -webkit-transform: scale(1.2) rotate(-5deg);
+  transform: scale(1.2) rotate(-5deg);
+}
 
 /*Css Avançado*/
 /*Ajeitando o Menu abaixo da sacola*/
@@ -308,22 +251,42 @@ footer .container { position: relative; }
   content: '\272A'; /*Tabela Unicode*/
   padding-right: 3px;
 }
-
+.painel h2:before {
+  content: '\2756'; /*Tabela Unicode*/
+  padding-right: 5px;
+  opacity: 0.4;
+}
 
 /*Efeitos Css3 Border Radius Box-shadow e gradiente -> CSS AVANÇADO CAP. 6*/
 .menu-departamentos, h2, ul, .busca, .painel{border-radius:4px;}
 
-
-
+.painel {
+  box-shadow: 1px 1px 4px #999; /*Sombra no elemento*/
+}
+.painel h2 {
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /*Sobra no texto*/
+}
 
 .novidades {
-  background-color: #f5dcdc;
-  background: linear-gradient(#f5dcdc, #f4bebe);
+  background-color: #f5dcdc; 
+  .gradiente-automatico(#f5dcdc);
 }
 
 .mais-vendidos {
   background: #dcdcf5;
-  background: linear-gradient(#dcdcf5, #bebef4);
+  .gradiente-automatico(#dcdcf5);
+}
+
+.painel li:hover {
+  .transicao(ease-in, 0.3s);
+}
+.painel li {
+  .transicao(ease-out, 0.3s);
+}
+
+/*escondendo o botão mostrar mais*/
+.painel button {
+  display: none;
 }
 
 /*Mostrar apenas 6 produtos e exibir botão mostrar mais*/
@@ -334,6 +297,106 @@ footer .container { position: relative; }
   display: block;
 }
 
+/*etilização botão mostrar mais*/
+.painel button {
+  /* posicionamento */
+  float: right;
+  margin-right: 10px;
+  padding: 10px;
+
+  /* estilo */
+  background-color: #333;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 3px rgba(30,30,30,0.5);
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  text-shadow: 1px 0 1px black;
+
+  /* animação*/
+  .transicao(all,0.3s);
+}
+.painel button:hover {
+  background-color: #393939;
+  box-shadow: 1px 0 20px rgba(200,200,120,0.9);
+}
+
+.painel button {
+  color: white;
+  position: relative;
+  margin-bottom: 10px;
+}
+.painel button:after {
+  /* elemento vazio */
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+
+  /* triangulo */
+  border-top: 10px solid #333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  /* posicionamento */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+
+  /* animação */
+  .transicao(all,0.3s);
+}
+.painel button:hover:after {
+  border-top-color: #393939;
+}
+
+/*fim da estilização*/
+
+/*estilização com fontes google fonts*/
 body {
   font-family: 'PT Sans', sans-serif;
 }
+.painel h2 {
+  font-family: 'Bad Script', cursive;
+}
+/*fim*/
+
+/*simplificando transições com less*/
+.transicao(@propriedades, @tempo) {
+  -webkit-transition: @propriedades @tempo;
+  -moz-transition: @propriedades @tempo;
+  -ms-transition: @propriedades @tempo;
+  -o-transition: @propriedades @tempo;
+  transition: @propriedades @tempo;
+}
+/*fim*/
+
+/*montamdo gradientes com less e adicionando todos os prefixos*/
+.gradiente(@cor1, @cor2) {
+    background: @cor1; /* Navegadores antigos */
+    background: -moz-linear-gradient(top,
+                        @cor1 0%, @cor2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom,
+                        color-stop(0%, @cor1),
+                        color-stop(100%, @cor2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,
+                        @cor1 0%, @cor2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,
+                        @cor1 0%, @cor2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, @cor1 0%, @cor2 100%); /* IE10+ */
+    background: linear-gradient(to bottom, @cor1 0%, @cor2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+                    startColorstr='@cor1',
+                    endColorstr='@cor2',
+                    GradientType=0 ); /* IE6-9 */
+}
+/*fim*/
+
+/*calculando o gradiente apenas com uma cor less*/
+/*a segunda cor terá um tom mais escuro*/
+.gradiente-automatico(@cor1) {
+    .gradiente(@cor1, darken(@cor1, 10%));
+}
+/*fim*/

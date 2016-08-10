@@ -1,3 +1,12 @@
+<?php 
+  $conn = mysqli_connect("localhost","root","valter","WD43");
+  $query = "SELECT * FROM produtos where id=" . $_GET['id'];
+  $result = mysqli_query($conn, $query);
+  $data = mysqli_fetch_array($result);
+  echo "<pre>";
+  print_r($data);
+  echo "</pre>";
+?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript">
     //Mostrando valores do input rage dentro do output em tempo real
@@ -12,7 +21,7 @@
   <?php 
     /*definindo o css e title da pagina atual*/
     $cabecalho_css = '<link rel="stylesheet" href="css/produto.css">';
-    $cabecalho_title = "Produto da Mirror Fashion";
+    $cabecalho_title = $data['nome'];
     require("header.php"); 
   ?>
   <!-- miolo da pagina -->
@@ -24,10 +33,7 @@
       <div class="detalhes">
         <h2>Detalhes do produto</h2>
 
-        <p>Esse é o melhor casaco de Cardigã que você já viu. Excelente 
-        material italiano com estampa desenhada pelos artesãos da 
-        comunidade de Krotor nas ilhas gregas. Compre já e receba hoje 
-        mesmo pela nossa entrega a jato.</p>
+        <p><?php echo $data['descricao'] ?></p>
         <!-- Tabela com caracteristicas do produto -->
         <table>
           <thead>
@@ -58,8 +64,8 @@
         <!--fim Tabela com caracteristicas do produto -->
       </div>    
       <!-- fim parte de detalhes do produto -->
-      <h1>Fuzzy Cardigan</h1>
-      <p>por apenas R$ 129,00</p>
+      <h1><?php echo $data['nome'] ?></h1>
+      <p><?php echo $data['preco'] ?></p>
       <!-- form para envio ao servidor -->
       <form action="carrinhoc.php" method="POST">
           <fieldset class="cores">
