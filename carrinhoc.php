@@ -1,9 +1,9 @@
 <?php
 	//Pega dados do produto vindos do formulario
-	$id = $_POST['id'];
-	$n = $_POST['nome'];
-	$p = $_POST['preco'];
-	$c = $_POST['cor'];
+	$id             = $_POST['id'];
+	$n              = $_POST['nome'];
+	$p              = $_POST['preco'];
+	$c              = $_POST['cor'];
 	$title_document = "Sua lista de compras";
 
 	session_start();
@@ -38,11 +38,11 @@
 					<td>
 						<img width="60px" src="img/produtos/foto<?= $id?>-<?= $dados['cor']?>.png">
 					</td>
-					<?php foreach ($dados as $value): ?>
+					<?php foreach ($dados as $value):?>
 						<td>
 							<?php echo $value?>	
 						</td>
-					<?php endforeach; ?>	
+					<?php endforeach;?>	
 					<td>
 						<a href="?acao=remover&id=<?php echo $id?>">Remover</a>
 					</td>
@@ -54,4 +54,8 @@
 	<a href="checkout.php">Finalizar compra!</a>
 </body>
 </html>
-<!-- <?php var_dump($_SESSION['carrinho']);?> -->
+<?php // var_dump($_SESSION['carrinho']);?>
+
+<?php 
+	
+?>
