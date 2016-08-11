@@ -50,7 +50,7 @@
 			<?php endforeach;?>			
 		</tbody>
 	</table>
-	<a href="index.html">Continuar comprando!</a>
+	<a href="index.php">Continuar comprando!</a>
 	<a href="checkout.php">Finalizar compra!</a>
 </body>
 </html>

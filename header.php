@@ -1,7 +1,7 @@
 <!-- quem incluir o cabeçalho tem que fechar tags body e html -->
 <!-- cabeçalho que pode ser reutilizavel em qualquer pagina -->
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Product">
 <head>
 	<meta charset="utf-8">
 	<!-- imprimindo o cabeçalho dinamico -->

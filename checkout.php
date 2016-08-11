@@ -14,7 +14,7 @@
 	<!-- painel responsivo que fica em linha em telas < 768px -->
 	<nav class="navbar navbar-default navbar-static-top">
 	  <div class="navbar-header">
-	    <a class="navbar-brand" href="index.html">Mirror Fashion</a>
+	    <a class="navbar-brand" href="index.php">Mirror Fashion</a>
 	  	<button class="navbar-toggle" type="button"
 			  data-target=".navbar-collapse" data-toggle="collapse">
 			  menu

@@ -83,7 +83,7 @@
       <h2>Novidades</h2>
       <!-- lista de produtos painel novidades -->
       <?php
-        $query = "SELECT * FROM produtos ORDER BY data DESC LIMIT 0, 10";
+        $query  = "SELECT * FROM produtos ORDER BY data DESC LIMIT 0, 15";
         $result = mysqli_query($conn, $query);
         echo "<ol>";
         foreach($result as $dados){
@@ -106,7 +106,7 @@
       <h2>Mais Vendidos</h2>
       <!-- lista de produtos painel mais vendidos -->
       <?php
-        $query = "SELECT * FROM produtos ORDER BY vendas ASC LIMIT 0, 10";
+        $query  = "SELECT * FROM produtos ORDER BY vendas DESC LIMIT 0, 15";
         $result = mysqli_query($conn, $query);
         echo "<ol>";
         foreach($result as $dados){
