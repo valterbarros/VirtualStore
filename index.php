@@ -10,8 +10,11 @@
   <head>
     <title>Mirror Fashion</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css"> <!--stylesheet quer dizer que a folha de estilo é persistente.-->
+    <!-- Meta tag para deixar a viewport do tamanho exato do dispositivo -->
+    <meta name="viewport" content="width=device-width">
+    <!-- css para tela ate 939px -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 939px)">
     <!--Rack descoberto no IE para adcionar suporte ao HTML5, chamado de html5shiv e ele esta dentro de um comentáro condicional e so pode ser interpretado pelo IE9-->
     <!--[if lt IE 9]> 
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
